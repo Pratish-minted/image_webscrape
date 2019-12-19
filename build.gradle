@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'eclipse'
+ }
+
+repositories {
+mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:28.0-jre'
+    testImplementation 'org.testng:testng:6.14.3'
+	testImplementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+	compile group: 'net.lightbody.bmp', name: 'browsermob-core', version: '2.1.5'
+	
+	
+	//testImplementation group: 'net.sourceforge.htmlunit', name: 'htmlunit', version: '2.36.0'
+	
+    
+}
+
+test {
+    useTestNG()
+}
